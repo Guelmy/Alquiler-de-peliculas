@@ -19,3 +19,7 @@ Despues esta el Boton RENTA, este es para ir a la interfas de Django y alquilar 
 Luego esta el Boton SOBRE NOSOTROS, el cual reedirije a la pagina de Encore.
 Por ultimo esta el Boton Agregar Usuario, este lleva al login de Django para agregar un nuevo usuario y ver cuales hay agregados 
 
+
+SUPER USUARIO: admin
+CONTRASEÑA: TheMaster0124
+
