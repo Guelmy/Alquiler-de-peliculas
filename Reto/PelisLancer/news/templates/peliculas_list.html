@@ -1,0 +1,40 @@
+{% extends 'base_generic.html' %}
+{% static %}
+
+
+{% block content %}
+
+<table class="table table-bordered">
+<thead>
+    <tr>
+        <td>#</td>
+        <td>Titulo</td>
+        <td>Genero</td>
+        <td>Pais</td>
+        <td>Precio</td>
+        <td>Director</td>
+        <td>Pais</td>
+      >
+    </tr>
+</thead>
+<tbody>
+        {% if peliculas %}
+        {% for peliculas in peliculas %}
+    <tr>
+        <td>{{peliculas.id}} </peliculas></td>
+        <td>{{ peliculas.titulo }}</td>
+        <td>{{ peliculas.genero }}</td>
+        <td>{{ peliculas.precio }}</td>
+        <td> {{ peliculas.director }} </td>
+        <td>{{ peliculas.pais }} </td>
+        <td>{{ peliculas.imagen }}</td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h1>No hay registros de peliculas</h1>
+
+    {% endif %}
+</tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<title> {% block titulo  %} {% endblock %} | PelisLancer </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'news/css/main.css.map'%}">-->
+	
+	<link rel="stylesheet" href="{% static  'news/css/bootstrap.min.css' %}">
+	{% block cssfile %} 
+	
+	{% endblock %}
+	<style>
+	
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+			}
+			
+			li {
+				float: left;
+			}
+			
+			li a, .dropbtn {
+				display: inline-block;
+				color: rgb(255, 255, 255);
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			
+			li a:hover, .dropdown:hover .dropbtn {
+				background-color: rgb(0, 225, 255);
+			}
+			
+			li.dropdown {
+				display: inline-block;
+			}
+			
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #0f2d8f;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+			
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+			}
+			
+			.dropdown-content a:hover {background-color: #000000}
+			
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+		
+			</style>	
+			</head>
+	
+<body>
+<div>
+    {% block content %}
+	<ul>
+			<li><a class="active" href="/">Inicio</a></li>
+			<li><a href="http://127.0.0.1:8000/admin/news/peliculas/">Peliculas</a></li>
+			<li><a href="http://127.0.0.1:8000/admin/news/alquiler/">Rentar</a></li>
+			<li><a href="http://www.encorerepair.com/site/about/index.html" target="_blank">Sobre Nosotros</a></li>
+			<li><a href="http://127.0.0.1:8000/admin/news/usuario/">Agregar Usuario</a></li>
+		  </ul>
+	  
+	{%endblock%}
+</div>
+
+</body>
+<Script src="http://code.jquery.com-1.10.2.min.js"> </Script>
+<script src="{% static 'news/js/bootstrap.min.js' %}"></script>
+
+{% block jsfile %}
+
+{% endblock %}
+</html>
